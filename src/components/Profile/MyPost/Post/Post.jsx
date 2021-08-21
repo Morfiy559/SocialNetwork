@@ -1,6 +1,6 @@
 import React from "react";
 import s from './Post.module.css';
-let count=0;
+
 const Post = (props) => {
 
     debugger;
@@ -9,7 +9,7 @@ const Post = (props) => {
             <img src="https://pixelbox.ru/wp-content/uploads/2021/02/mult-ava-instagram-58.jpg"/>
             {props.Message}
 
-            <div>{count++}
+            <div>{props.likesCount}
                 <span>like</span>
             </div>
         </div>
