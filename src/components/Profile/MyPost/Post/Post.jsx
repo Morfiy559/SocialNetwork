@@ -3,7 +3,6 @@ import s from './Post.module.css';
 
 const Post = (props) => {
 
-    debugger;
     return (
         <div className={s.item}>
             <img src="https://pixelbox.ru/wp-content/uploads/2021/02/mult-ava-instagram-58.jpg"/>
