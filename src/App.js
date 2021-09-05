@@ -7,9 +7,9 @@ import {BrowserRouter, Route} from "react-router-dom";
 import Music from "./components/Music/Music";
 import News from "./components/News/News";
 import Settings from "./components/Settings/Settings";
+import DialogsContainer from "./components/Dialogs/DialogsContainer";
 
 function App(props) {
-
     return (<BrowserRouter>
             <div className="app-wrapper">
                 <Header/>
@@ -21,9 +21,8 @@ function App(props) {
                     <Route path='/music' component={Music}/>
                     <Route path='/settings' component={Settings}/>
 
-                    <Route path='/dialogs' render={() => <Dialogs state={props.state.dialogsPage} dispatch={props.dispatch}/>}/>
-                    <Route path='/profile' render={() => <Profile profilePage={props.state.profilePage}
-                                                                  dispatch={props.dispatch}/>}/>
+                    <Route path='/dialogs' render={() => <DialogsContainer store={props.store}/>}/>
+                    <Route path='/profile' render={() => <Profile store={props.store}/>}/>
                 </div>
             </div>
         </BrowserRouter>
