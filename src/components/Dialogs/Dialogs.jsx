@@ -20,6 +20,14 @@ const Dialogs = (props) => {
         let text = e.target.value;
         props.updateNewMessageText(text);
     }
+
+    let onKeyDown = e => {
+        if(e.keyCode == 13){
+            e.preventDefault();
+            props.sendMessage();
+        }
+    }
+
     return (
         <div className={s.dialogs}>
             <div className={s.dialogItems}>
@@ -28,7 +36,7 @@ const Dialogs = (props) => {
             <div className={s.messages}>
                 <div>{messageElements}</div>
                 <div>
-                    <textarea onChange={onPostChange}  value={newMessageText}/>
+                    <textarea onChange={onPostChange} onKeyDown={onKeyDown} value={newMessageText}/>
                 </div>
                 <div>
                 <button onClick={ sendMessage }>

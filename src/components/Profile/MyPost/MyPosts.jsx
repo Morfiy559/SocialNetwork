@@ -4,23 +4,24 @@ import Post from "./Post/Post";
 import {addPostActionCreator, updateNewPostTextActionCreator} from "../../../redux/profile-reducer";
 
 
-
-
-
 const MyPosts = (props) => {
 
     let newPostElement = React.createRef();
 
     let onAddPost = () => {
-
         props.addPost();
-
     }
 
+    let onPostChange = (e) => {
+        let text = e.target.value;
+        props.updateNewPostText(text);
+    }
 
-    let onPostChange = () => {
-    let text = newPostElement.current.value;
-    props.updateNewPostText(text);
+    let onKeyDown = e => {
+        if(e.keyCode == 13){
+            e.preventDefault();
+            props.addPost();
+        }
     }
 
     let postsElements = props.posts.map(p => <Post Message={p.message} likesCount={p.likesCount}/>)
@@ -29,7 +30,7 @@ const MyPosts = (props) => {
             <h3>My posts</h3>
             <div>
                 <div>
-                    <textarea onChange={onPostChange} ref={newPostElement} value={props.newPostText}></textarea>
+                    <textarea onChange={onPostChange} onKeyDown={onKeyDown} value={props.newPostText}></textarea>
                 </div>
                 <div>
                     <button onClick={onAddPost}>Add post</button>
