@@ -22,7 +22,7 @@ const Dialogs = (props) => {
     }
 
     let onKeyDown = e => {
-        if(e.keyCode == 13){
+        if(e.keyCode === 13){
             e.preventDefault();
             props.sendMessage();
         }
