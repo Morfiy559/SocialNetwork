@@ -2,8 +2,10 @@
     grid-area: n;
     background-color: blueviolet;
 }
+
 .item a {
     color: white;
+    cursor: pointer;
 }
 .item a.activeLink {
      color: gold;

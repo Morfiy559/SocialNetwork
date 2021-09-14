@@ -3,31 +3,34 @@ import styles from './users.module.css';
 import * as axios from "axios";
 import avatar from '../../assets/images/avatar.png';
 
-const Users = (props) => {
-debugger;
-    if(props.users.length===0) {
+class Users extends React.Component {
+
+    constructor(props) {
+        super(props);
         axios.get('https://social-network.samuraijs.com/api/1.0/users').then(
-            response=>{
-                props.setUsers(response.data.items)
+            response => {
+                this.props.setUsers(response.data.items)
             }
         )
     }
 
-
-
-
-    return <div>
-        {props.users.map(u=><div key={u.id}>
+    render() {
+        return <div>
+            {this.props.users.map(u => <div key={u.id}>
             <span>
                 <span>
-                    <img src={u.photos.small != null ? u.photos.small : avatar } className={styles.userPhoto} alt="avatar"/>
+                    <img src={u.photos.small || avatar} className={styles.userPhoto} alt="avatar"/>
                 </span>
                 <span>
-                    {(u.followed===true)?<button onClick={()=>{props.unfollow(u.id)}}>unfollow</button>
-                        :<button onClick={()=>{props.follow(u.id)}}>follow</button>}
+                    {(u.followed === true) ? <button onClick={() => {
+                            this.props.unfollow(u.id)
+                        }}>unfollow</button>
+                        : <button onClick={() => {
+                            this.props.follow(u.id)
+                        }}>follow</button>}
                 </span>
             </span>
-            <span>
+                <span>
                 <span>
                     <span>
                         {u.name}
@@ -45,9 +48,9 @@ debugger;
                     </span>
                 </span>
             </span>
-        </div>)}
-    </div>
+            </div>)}
+        </div>
+    }
 }
-
 
 export default Users;
