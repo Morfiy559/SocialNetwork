@@ -19,7 +19,7 @@ const ProfileInfo = (props) => {
             <div>{props.profile.aboutMe}</div>
             <div>{props.profile.fullName}</div>
             <div>{props.profile.lookingForAJob? <img src={palecUp} alt=""/>: <img src={palecDown} alt=""/>}</div>
-            <div className={s.descriptionBlock}>ava+description</div>
+            {/*<div className={s.descriptionBlock}>ava+description</div>*/}
 
         </div>
     )
