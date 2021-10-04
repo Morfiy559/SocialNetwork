@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="794e32b0-b989-4270-ab73-92a0a14f0a50" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/Header/HeaderContainer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/auth-reducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPost/MyPosts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPost/MyPosts.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/redux-store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/redux-store.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +50,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Profile" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Header" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -61,11 +65,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mberd\WebstormProjects\SocialNetwork\src\components\Header" />
+      <recent name="C:\Users\mberd\WebstormProjects\SocialNetwork\src\redux" />
       <recent name="C:\Users\mberd\WebstormProjects\SocialNetwork\src\components\Profile" />
       <recent name="C:\Users\mberd\WebstormProjects\SocialNetwork\src\components\Users" />
-      <recent name="C:\Users\mberd\WebstormProjects\SocialNetwork\src\redux" />
       <recent name="C:\Users\mberd\WebstormProjects\SocialNetwork\src\components\Dialogs" />
-      <recent name="C:\Users\mberd\WebstormProjects\SocialNetwork\src\components\Profile\MyPost" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\mberd\WebstormProjects\SocialNetwork\src\components\Profile" />
@@ -133,7 +137,13 @@
       <workItem from="1631943775778" duration="1897000" />
       <workItem from="1632156934254" duration="623000" />
       <workItem from="1632215926342" duration="300000" />
-      <workItem from="1632735177415" duration="20988000" />
+      <workItem from="1632735177415" duration="21754000" />
+      <workItem from="1633017066102" duration="11698000" />
+      <workItem from="1633157501869" duration="1247000" />
+      <workItem from="1633185830063" duration="6657000" />
+      <workItem from="1633216673040" duration="157000" />
+      <workItem from="1633263325157" duration="641000" />
+      <workItem from="1633380466326" duration="3092000" />
     </task>
     <servers />
   </component>
