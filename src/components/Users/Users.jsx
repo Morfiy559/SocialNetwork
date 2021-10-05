@@ -3,6 +3,8 @@ import styles from "./users.module.css";
 import avatar from "../../assets/images/avatar.png";
 import {NavLink} from "react-router-dom";
 import * as axios from "axios";
+import {SubscribeAPI} from "../../api/api";
+import {toggleFollowingProgress} from "../../redux/users-reducer";
 
 let Users = (props) => {
     let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
@@ -26,32 +28,28 @@ let Users = (props) => {
                     </NavLink>
                 </span>
                 <span>
-                    {(u.followed === true) ? <button onClick={() => {
-                            axios.post(`https://social-network.samuraijs.com/api/1.0/follow/${u.id}`,{},{
-                                withCredentials:true,
-                                headers:{
-                                    'API-KEY':'57532bf6-e55f-488a-bee7-a2fd0c3210a1'
-                                }
-                            }).then(
-                                response => {
-                                    if(response.data.resultCode===0){
+                    {(u.followed === true) ? <button disabled={props.followingInProgress.some(id=>id===u.id)} onClick={() => {
+
+                            props.toggleFollowingProgress(true, u.id);
+                            SubscribeAPI.unfollow(u.id).then(
+                                data => {
+                                    if(data.resultCode===0){
                                         props.unfollow(u.id)
                                     }
+                                    props.toggleFollowingProgress(false, u.id);
+
                                 }
                             )
 
                         }}>unfollow</button>
-                        : <button onClick={() => {
-                            axios.delete(`https://social-network.samuraijs.com/api/1.0/follow/${u.id}`,{
-                                withCredentials:true,
-                                headers:{
-                                    'API-KEY':'57532bf6-e55f-488a-bee7-a2fd0c3210a1'
-                                }
-                            }).then(
-                                response => {
-                                    if(response.data.resultCode===0){
-                                        props.unfollow(u.id)
+                        : <button disabled={props.followingInProgress.some(id=>id===u.id)} onClick={() => {
+                            props.toggleFollowingProgress(true, u.id);
+                            SubscribeAPI.follow(u.id).then(
+                                data => {
+                                    if(data.resultCode===0){
+                                        props.follow(u.id)
                                     }
+                                    props.toggleFollowingProgress(false, u.id);
                                 }
                             )
                         }}>follow</button>}
