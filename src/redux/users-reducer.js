@@ -1,4 +1,4 @@
-import {SubscribeAPI, usersAPI} from "../api/api";
+import {usersAPI} from "../api/api";
 
 const FOLLOW = 'FOLLOW';
 const UNFOLLOW = 'UNFOLLOW';
@@ -14,7 +14,7 @@ let initialState = {
     totalUsersCount: 0,
     currentPage: 1,
     isFetching: true,
-    followingInProgress: [1, 2]
+    followingInProgress: []
 }
 
 const usersReducer = (state = initialState, action) => {
@@ -97,6 +97,7 @@ export const toggleFollowingProgress = (isFetching, userId) => ({
 
 export const getUsers = (currentPage, pageSize) => {
     return (dispatch) => {
+        dispatch(setCurrentPage(currentPage));
         dispatch(toggleIsFetching(true));
         usersAPI.getUsers(currentPage, pageSize).then(
             data => {
@@ -110,7 +111,7 @@ export const getUsers = (currentPage, pageSize) => {
 export const unfollow = (userId) => {
     return (dispatch) => {
         dispatch(toggleFollowingProgress(true, userId));
-        SubscribeAPI.unfollow(userId).then(
+        usersAPI.unfollow(userId).then(
             data => {
                 if(data.resultCode===0){
                     dispatch(unfollowSuccess(userId));
@@ -124,7 +125,7 @@ export const unfollow = (userId) => {
 export const follow = (userId) => {
     return (dispatch) => {
         dispatch(toggleFollowingProgress(true, userId));
-        SubscribeAPI.follow(userId).then(
+        usersAPI.follow(userId).then(
             data => {
                 if(data.resultCode===0){
                     dispatch(followSuccess(userId));

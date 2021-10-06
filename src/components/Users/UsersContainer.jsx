@@ -10,7 +10,6 @@ import {
 } from "../../redux/users-reducer";
 import Users from "./Users";
 import Preloader from "../common/Preloader/preloader";
-import {usersAPI} from "../../api/api";
 
 class UsersAPI extends React.Component {
 
@@ -47,32 +46,10 @@ let mapStateToProps = (state)=>{
         pageSize: state.usersPage.pageSize,
         totalUsersCount: state.usersPage.totalUsersCount,
         currentPage: state.usersPage.currentPage,
+        followingInProgress:state.usersPage.followingInProgress
     }
 }
 
-// let mapDispatchToProps = (dispatch)=>{
-//     return{
-//         follow:(userId)=>{
-//             dispatch(followAC(userId))
-//         },
-//         unfollow:(userId)=>{
-//             dispatch(unfollowAC(userId))
-//         },
-//         setUsers:(users)=>{
-//             dispatch(setUsersAC(users))
-//         },
-//         setCurrentPage:(pageNumber)=>{
-//             dispatch(setCurrentPageAC(pageNumber))
-//         },
-//         setTotalUsersCount:(count)=>{
-//             dispatch(setTotalUsersCountAC(count))
-//         },
-//         toggleIsFetching:(isFetching)=>{
-//             dispatch(toggleIsFetchingAC(isFetching))
-//         },
-//
-//     }
-// }
 
 const UsersContainer = connect(mapStateToProps,{
     follow,unfollow,setUsers, setCurrentPage,

@@ -2,22 +2,21 @@ import React from "react";
 import styles from "./users.module.css";
 import avatar from "../../assets/images/avatar.png";
 import {NavLink} from "react-router-dom";
-import * as axios from "axios";
-import {SubscribeAPI} from "../../api/api";
-import {toggleFollowingProgress} from "../../redux/users-reducer";
 
 let Users = (props) => {
     let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
 
     let pages = [];
-    for (let i =1;i<=pagesCount;i++){
+    for (let i = 1; i <= pagesCount; i++) {
         pages.push(i)
     }
     return <div>
         <div className={styles.pages}>
-            {pages.map(p=>{
-                return <span className={props.currentPage===p && styles.selectedPage}
-                             onClick={()=>{props.onPagesChanged(p)}}>{p+" "}</span>
+            {pages.map(p => {
+                return <span className={props.currentPage === p && styles.selectedPage}
+                             onClick={() => {
+                                 props.onPagesChanged(p)
+                             }}>{p + " "}</span>
             })}
         </div>
         {props.users.map(u => <div key={u.id}>
@@ -28,11 +27,12 @@ let Users = (props) => {
                     </NavLink>
                 </span>
                 <span>
-                    {(u.followed === true) ? <button disabled={props.followingInProgress.some(id=>id===u.id)} onClick={() => {
+                    {(u.followed === true) ?
+                        <button disabled={props.followingInProgress.some(id => id === u.id)} onClick={() => {
                             props.unfollow(u.id);
 
                         }}>unfollow</button>
-                        : <button disabled={props.followingInProgress.some(id=>id===u.id)} onClick={() => {
+                    : <button disabled={props.followingInProgress.some(id => id === u.id)} onClick={() => {
                             props.follow(u.id);
                         }}>follow</button>}
                 </span>
