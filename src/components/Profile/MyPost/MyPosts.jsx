@@ -1,39 +1,28 @@
 import React from "react";
 import s from './MyPosts.module.css';
 import Post from "./Post/Post";
+import {Field, reduxForm} from "redux-form/es";
 
 
 const MyPosts = (props) => {
 
+let onSubmit = (values) =>{
+    props.addPost(values.newPostBody);
+}
 
-    let onAddPost = () => {
-        props.addPost();
-    }
-
-    let onPostChange = (e) => {
-        let text = e.target.value;
-        props.updateNewPostText(text);
-    }
-
-    let onKeyDown = e => {
-        if(e.keyCode == 13){
-            e.preventDefault();
-            props.addPost();
-        }
-    }
+    // let onKeyDown = e => {
+    //     if(e.keyCode == 13){
+    //         e.preventDefault();
+    //         props.addPost();
+    //     }
+    // }
 
     let postsElements = props.posts.map((p,index) => <Post Message={p.message} likesCount={p.likesCount} key={index}/>)
     return (
         <div className={s.postsBlock}>
             <h3>My posts</h3>
             <div>
-                <div>
-                    <textarea onChange={onPostChange} onKeyDown={onKeyDown} value={props.newPostText}></textarea>
-                </div>
-                <div>
-                    <button onClick={onAddPost}>Add post</button>
-                </div>
-
+                <AddPostReduxForm onSubmit={onSubmit}/>
             </div>
             <div className={s.posts}>
                 {postsElements}
@@ -43,4 +32,19 @@ const MyPosts = (props) => {
 
     )
 }
+
+let AddPostForm = (props) =>{
+    return(
+        <form onSubmit={props.handleSubmit}>
+            <div>
+                <Field component={'textarea'} name={'newPostBody'} placeholder={'Enter your post'}/>
+            </div>
+            <div>
+                <button>Add post</button>
+            </div>
+        </form>
+    )
+}
+
+const AddPostReduxForm = reduxForm({form:'profileAddPostForm'})(AddPostForm);
 export default MyPosts;
