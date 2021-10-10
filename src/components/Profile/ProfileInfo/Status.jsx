@@ -2,9 +2,9 @@ import React from "react";
 import s from './ProfileInfo.module.css';
 
 class ProfileStatus extends React.Component {
+
     state = {
-        editMode:false,
-        status:this.props.status
+        editMode:false
     }
 
     activateEditMode = () => {

@@ -1,4 +1,3 @@
-import * as axios from "axios";
 import {profileAPI} from "../api/api";
 
 const ADD_POST = 'ADD-POST';
@@ -14,29 +13,17 @@ let initialState = {
         {id: 2, message: "I'm !", likesCount: 23},
         {id: 2, message: "I'm ne!", likesCount: 55},
     ],
-    newPostText: 'kkkkkk',
-    profile: null,
-    status: ''
+    profile: null
 }
 
 const profileReducer = (state = initialState, action) => {
 
     switch (action.type) {
-        case ADD_POST: {
+        case ADD_POST:
             return {
                 ...state,
-                posts: [...state.posts, {id: 5, message: state.newPostText, likesCount: 0}],
-                newPostText: '',
+                posts: [...state.posts, {id: 5, message: action.newPostBody, likesCount: 0}],
             };
-        }
-            ;
-        case UPDATE_NEW_POST_TEXT: {
-            return {
-                ...state,
-                newPostText: action.newText,
-            };
-        }
-            ;
         case SET_USER_PROFILE: {
             return {
                 ...state,
@@ -55,11 +42,9 @@ const profileReducer = (state = initialState, action) => {
 
 }
 
-export const addPostActionCreator = () => ({type: ADD_POST})
-export const updateNewPostTextActionCreator = (text) => ({type: UPDATE_NEW_POST_TEXT, newText: text})
+export const addPostActionCreator = (newPostBody) => ({type: ADD_POST,newPostBody})
 export const setUserProfile = (profile) => ({type: SET_USER_PROFILE, profile})
 export const setStatus = (status) => ({type: SET_STATUS, status})
-
 export const getProfile = (userId) => {
     return (dispatch) => {
         profileAPI.getProfile(userId).then(
