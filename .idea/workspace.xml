@@ -1,34 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="794e32b0-b989-4270-ab73-92a0a14f0a50" name="Changes" comment="">
-    <list default="true" id="f7a368e9-10ab-4fd0-8bdf-a3f23f8520ce" name="Changes" comment="">
+    <list default="true" id="ef45862e-86da-43da-8e00-63e72a736d0e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPost/MyPosts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPost/MyPosts.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/Status.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/Status.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/DialogsContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/DialogsContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPost/MyPosts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPost/MyPosts.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPost/MyPostsContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPost/MyPostsContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/dialogs-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/dialogs-reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/HeaderContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/HeaderContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/Login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/auth-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/auth-reducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/profile-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profile-reducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="CSS File" />
-        <option value="JavaScript File" />
-      </list>
-    </option>
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -38,13 +24,6 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
-  <component name="JsbtTreeLayoutManager">
-    <layout place="tools.popupnpm">
-      <scroll-view-position x="0" y="0" />
-    </layout>
-  </component>
-  <component name="ProjectId" id="1woMUNwfzfYOG2gNytief69IsiT" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -53,104 +32,33 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../books" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.standard" value="" />
-    <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
-    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2021.2.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\mberd\WebstormProjects\SocialNetwork\src\components\Header" />
-      <recent name="C:\Users\mberd\WebstormProjects\SocialNetwork\src\redux" />
-      <recent name="C:\Users\mberd\WebstormProjects\SocialNetwork\src\components\Profile" />
-      <recent name="C:\Users\mberd\WebstormProjects\SocialNetwork\src\components\Users" />
-      <recent name="C:\Users\mberd\WebstormProjects\SocialNetwork\src\components\Dialogs" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\mberd\WebstormProjects\SocialNetwork\src\components\Profile" />
-      <recent name="C:\Users\mberd\WebstormProjects\untitled\src\components\Profile" />
-      <recent name="C:\Users\mberd\WebstormProjects\SocialNetwork\src\components\Profile\ProfileInfo" />
-      <recent name="C:\Users\mberd\WebstormProjects\untitled\src\components\Navbar" />
-      <recent name="C:\Users\mberd\WebstormProjects\untitled\src\components\Header" />
-    </key>
-  </component>
-  <component name="RunManager" selected="npm.npm start">
-    <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
-      <method v="2" />
-    </configuration>
-    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+  <component name="RunManager">
+    <configuration name="react-scripts start" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="build" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="npm start" type="js.build_tools.npm">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
+        <script value="react-scripts" />
         <script value="start" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
       <method v="2" />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="npm.build" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="794e32b0-b989-4270-ab73-92a0a14f0a50" name="Changes" comment="" />
-      <created>1629120504748</created>
+      <changelist id="ef45862e-86da-43da-8e00-63e72a736d0e" name="Changes" comment="" />
+      <created>1634045429747</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1629120504748</updated>
-      <workItem from="1629120506915" duration="9763000" />
-      <workItem from="1629142283597" duration="6636000" />
-      <workItem from="1629179268103" duration="7722000" />
-      <workItem from="1629530023475" duration="761000" />
-      <workItem from="1629807353885" duration="6353000" />
-      <workItem from="1630056202730" duration="2600000" />
-      <workItem from="1630139821075" duration="1413000" />
-      <workItem from="1630141263946" duration="484000" />
-      <workItem from="1630141764622" duration="2403000" />
-      <workItem from="1630144437520" duration="754000" />
-      <workItem from="1630342246890" duration="65507000" />
-      <workItem from="1631343958481" duration="41000" />
-      <workItem from="1631394846256" duration="408000" />
-      <workItem from="1631609363240" duration="2203000" />
-      <workItem from="1631635113686" duration="5811000" />
-      <workItem from="1631728152145" duration="1794000" />
-      <workItem from="1631907271954" duration="2183000" />
-      <workItem from="1631943775778" duration="1897000" />
-      <workItem from="1632156934254" duration="623000" />
-      <workItem from="1632215926342" duration="300000" />
-      <workItem from="1632735177415" duration="21754000" />
-      <workItem from="1633017066102" duration="11698000" />
-      <workItem from="1633157501869" duration="1247000" />
-      <workItem from="1633185830063" duration="6657000" />
-      <workItem from="1633216673040" duration="157000" />
-      <workItem from="1633263325157" duration="641000" />
-      <workItem from="1633380466326" duration="3450000" />
-      <workItem from="1633419770402" duration="21643000" />
-      <workItem from="1633591936671" duration="14471000" />
-      <workItem from="1633591936671" duration="7908000" />
-      <workItem from="1633696335183" duration="7818000" />
+      <updated>1634045429747</updated>
+      <workItem from="1634045434922" duration="4367000" />
     </task>
     <servers />
   </component>
@@ -162,21 +70,10 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="CUSTOM_BOOLEAN_PROPERTIES">
-                <map>
-                  <entry key="Show.Git.Branches" value="true" />
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
   </component>
 </project>
