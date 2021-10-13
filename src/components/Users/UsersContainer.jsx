@@ -12,6 +12,13 @@ import Users from "./Users";
 import Preloader from "../common/Preloader/preloader";
 import {compose} from "redux";
 import {withAuthRedirect} from "../../hoc/withAuthRedirect";
+import {
+    getCurrentPageSel,
+    getFollowingInProgressSel,
+    getPageSizeSel,
+    getTotalCountSel,
+    getUsersSel
+} from "../../redux/users-selectors";
 
 class UsersAPI extends React.Component {
 
@@ -42,11 +49,11 @@ class UsersAPI extends React.Component {
 
 let mapStateToProps = (state)=>{
     return {
-        users:state.usersPage.users,
-        pageSize: state.usersPage.pageSize,
-        totalUsersCount: state.usersPage.totalUsersCount,
-        currentPage: state.usersPage.currentPage,
-        followingInProgress:state.usersPage.followingInProgress
+        users: getUsersSel(state),
+        pageSize: getPageSizeSel(state),
+        totalUsersCount: getTotalCountSel(state),
+        currentPage: getCurrentPageSel(state),
+        followingInProgress:getFollowingInProgressSel(state)
     }
 }
 
