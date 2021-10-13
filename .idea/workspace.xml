@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7a368e9-10ab-4fd0-8bdf-a3f23f8520ce" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/redux/users-selectors.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileStatusWithHooks.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/Status.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/Status.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Users/UsersContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/UsersContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/Status.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileStatus.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +47,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/redux" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Profile/ProfileInfo" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -62,11 +62,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mberd\WebstormProjects\SocialNetwork\src\components\Profile\ProfileInfo" />
       <recent name="C:\Users\mberd\WebstormProjects\SocialNetwork\src\redux" />
       <recent name="C:\Users\mberd\WebstormProjects\SocialNetwork\src\components\Header" />
       <recent name="C:\Users\mberd\WebstormProjects\SocialNetwork\src\components\Profile" />
       <recent name="C:\Users\mberd\WebstormProjects\SocialNetwork\src\components\Users" />
-      <recent name="C:\Users\mberd\WebstormProjects\SocialNetwork\src\components\Dialogs" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\mberd\WebstormProjects\SocialNetwork\src\components\Profile" />
@@ -109,7 +109,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="794e32b0-b989-4270-ab73-92a0a14f0a50" name="Changes" comment="" />
+      <changelist id="f7a368e9-10ab-4fd0-8bdf-a3f23f8520ce" name="Changes" comment="" />
       <created>1629120504748</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -143,6 +143,7 @@
       <workItem from="1633380466326" duration="3450000" />
       <workItem from="1633419770402" duration="21643000" />
       <workItem from="1633591936671" duration="14471000" />
+      <workItem from="1634156473430" duration="2167000" />
     </task>
     <servers />
   </component>
