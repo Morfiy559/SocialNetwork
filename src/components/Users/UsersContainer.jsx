@@ -23,8 +23,6 @@ class UsersAPI extends React.Component {
     }
 
     render() {
-
-
         return <>
             {this.props.isFetching ? <Preloader/>:null }
             <Users
@@ -54,7 +52,7 @@ let mapStateToProps = (state)=>{
 
 
 export default compose(
-    withAuthRedirect,
+    // withAuthRedirect,
     connect(mapStateToProps,{
         follow,unfollow,setUsers, setCurrentPage,
         toggleFollowingProgress,getUsers
