@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7a368e9-10ab-4fd0-8bdf-a3f23f8520ce" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileStatusWithHooks.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileInfo.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/Status.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileStatus.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileStatusWithHooks.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/ProfileInfo/ProfileStatusWithHooks.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +141,8 @@
       <workItem from="1633380466326" duration="3450000" />
       <workItem from="1633419770402" duration="21643000" />
       <workItem from="1633591936671" duration="14471000" />
-      <workItem from="1634156473430" duration="2167000" />
+      <workItem from="1634156473430" duration="2556000" />
+      <workItem from="1634191344785" duration="1667000" />
     </task>
     <servers />
   </component>
