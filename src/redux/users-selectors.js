@@ -13,3 +13,6 @@ export const getCurrentPageSel = (state) => {
 export const getFollowingInProgressSel = (state) => {
     return state.usersPage.followingInProgress
 }
+export const getIsFetching = (state) => {
+    return state.usersPage.isFetching
+}

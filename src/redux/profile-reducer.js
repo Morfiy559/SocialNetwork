@@ -41,36 +41,23 @@ const profileReducer = (state = initialState, action) => {
 
 }
 
-export const addPostActionCreator = (newPostBody) => ({type: ADD_POST,newPostBody})
+export const addPostActionCreator = (newPostBody) => ({type: ADD_POST, newPostBody})
 export const setUserProfile = (profile) => ({type: SET_USER_PROFILE, profile})
 export const setStatus = (status) => ({type: SET_STATUS, status})
-export const getProfile = (userId) => {
-    return (dispatch) => {
-        profileAPI.getProfile(userId).then(
-            data => {
-                dispatch(setUserProfile(data));
-            }
-        )
-    }
+export const getProfile = (userId) => async (dispatch) => {
+    let data = await profileAPI.getProfile(userId);
+    dispatch(setUserProfile(data));
 }
-export const getStatus = (userId) => {
-    return (dispatch) => {
-        profileAPI.getStatus(userId).then(
-            data => {
-                dispatch(setStatus(data));
-            }
-        )
-    }
+
+export const getStatus = (userId) => async (dispatch) => {
+    let data = await profileAPI.getStatus(userId);
+    dispatch(setStatus(data));
 }
-export const updateStatus = (status) => {
-    return (dispatch) => {
-        profileAPI.updateStatus(status)
-            .then(data => {
-                    if (data.resultCode === 0) {
-                        dispatch(setStatus(status));
-                    }
-                }
-            )
+
+export const updateStatus = (status) => async (dispatch) => {
+    let data = await profileAPI.updateStatus(status);
+    if (data.resultCode === 0) {
+        dispatch(setStatus(status));
     }
 }
 

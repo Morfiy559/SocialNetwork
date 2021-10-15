@@ -14,7 +14,7 @@ import {compose} from "redux";
 import {withAuthRedirect} from "../../hoc/withAuthRedirect";
 import {
     getCurrentPageSel,
-    getFollowingInProgressSel,
+    getFollowingInProgressSel, getIsFetching,
     getPageSizeSel,
     getTotalCountSel,
     getUsersSel
@@ -30,8 +30,9 @@ class UsersAPI extends React.Component {
     }
 
     render() {
+        debugger
         return <>
-            {this.props.isFetching ? <Preloader/>:null }
+            {this.props.isFetching ? <Preloader/>:null}
             <Users
             totalUsersCount={this.props.totalUsersCount}
             currentPage={this.props.currentPage}
@@ -53,7 +54,8 @@ let mapStateToProps = (state)=>{
         pageSize: getPageSizeSel(state),
         totalUsersCount: getTotalCountSel(state),
         currentPage: getCurrentPageSel(state),
-        followingInProgress:getFollowingInProgressSel(state)
+        followingInProgress:getFollowingInProgressSel(state),
+        isFetching: getIsFetching(state)
     }
 }
 

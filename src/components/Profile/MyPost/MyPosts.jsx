@@ -1,39 +1,46 @@
 import React from "react";
 import s from './MyPosts.module.css';
 import Post from "./Post/Post";
-import {Field, reduxForm} from "redux-form/es";
+import {Field, reduxForm} from "redux-form";
 import {maxLengthCreator, required} from "../../../utils/validators/validators";
 import {Element} from "../../common/FormsControls/FormsControls";
 
 
+class MyPosts extends React.Component {
 
-const MyPosts = (props) => {
+    componentDidUpdate(prevProps, prevState, snapshot) {
 
-let onSubmit = (values) =>{
-    props.addPost(values.newPostBody);
-}
+    }
 
-    // let onKeyDown = e => {
-    //     if(e.keyCode == 13){
-    //         e.preventDefault();
-    //         props.addPost();
-    //     }
-    // }
+    render() {
+    console.log('RENDER')
+        let onSubmit = (values) => {
+            this.props.addPost(values.newPostBody);
+        }
 
-    let postsElements = props.posts.map((p,index) => <Post Message={p.message} likesCount={p.likesCount} key={index}/>)
-    return (
-        <div className={s.postsBlock}>
-            <h3>My posts</h3>
-            <div>
-                <AddPostReduxForm onSubmit={onSubmit}/>
+        // let onKeyDown = e => {
+        //     if(e.keyCode == 13){
+        //         e.preventDefault();
+        //         props.addPost();
+        //     }
+        // }
+
+        let postsElements = this.props.posts.map((p, index) => <Post Message={p.message} likesCount={p.likesCount}
+                                                                     key={index}/>)
+        return (
+            <div className={s.postsBlock}>
+                <h3>My posts</h3>
+                <div>
+                    <AddPostReduxForm onSubmit={onSubmit}/>
+                </div>
+                <div className={s.posts}>
+                    {postsElements}
+                </div>
             </div>
-            <div className={s.posts}>
-                {postsElements}
-            </div>
-        </div>
 
 
-    )
+        )
+    }
 }
 
 const maxLength10 = maxLengthCreator(10);
