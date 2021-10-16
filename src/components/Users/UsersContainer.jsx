@@ -15,7 +15,7 @@ import {withAuthRedirect} from "../../hoc/withAuthRedirect";
 import {
     getCurrentPageSel,
     getFollowingInProgressSel, getIsFetching,
-    getPageSizeSel,
+    getPageSizeSel, getPortionSize,
     getTotalCountSel,
     getUsersSel
 } from "../../redux/users-selectors";
@@ -43,6 +43,7 @@ class UsersAPI extends React.Component {
             unfollow={this.props.unfollow}
             followingInProgress={this.props.followingInProgress}
             toggleFollowingProgress={this.props.toggleFollowingProgress}
+            portionSize={this.props.portionSize}
         />
         </>
     }
@@ -55,7 +56,8 @@ let mapStateToProps = (state)=>{
         totalUsersCount: getTotalCountSel(state),
         currentPage: getCurrentPageSel(state),
         followingInProgress:getFollowingInProgressSel(state),
-        isFetching: getIsFetching(state)
+        isFetching: getIsFetching(state),
+        portionSize:getPortionSize(state)
     }
 }
 

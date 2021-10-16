@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import styles from "./users.module.css";
 import avatar from "../../assets/images/avatar.png";
 import {NavLink} from "react-router-dom";
@@ -10,14 +10,24 @@ let Users = (props) => {
     for (let i = 1; i <= pagesCount; i++) {
         pages.push(i)
     }
+    let portionCount = Math.ceil(pagesCount/props.portionSize);
+    let [portionNumber, setPortionNumber] = useState(1);
+    let leftEdge = (portionNumber-1)*props.portionSize;
+    let rightEdge = portionNumber*props.portionSize;
+
+
     return <div>
         <div className={styles.pages}>
-            {pages.map(p => {
+            {portionNumber > 1 &&
+                <button onClick={()=>{setPortionNumber(portionNumber-1)}}>PREV</button>}
+            {pages.filter(page=>page>leftEdge &&page<=rightEdge).map(p => {
                 return <span className={props.currentPage === p && styles.selectedPage}
                              onClick={() => {
                                  props.onPagesChanged(p)
                              }}>{p + " "}</span>
             })}
+            {portionNumber<portionCount &&
+                <button onClick={()=>{setPortionNumber(portionNumber+1)}}>NEXT</button>}
         </div>
         {props.users.map(u => <div key={u.id}>
             <span>
