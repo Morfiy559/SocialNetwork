@@ -21,7 +21,7 @@ let Users = (props) => {
             {portionNumber > 1 &&
                 <button onClick={()=>{setPortionNumber(portionNumber-1)}}>PREV</button>}
             {pages.filter(page=>page>leftEdge &&page<=rightEdge).map(p => {
-                return <span className={props.currentPage === p && styles.selectedPage}
+                return <span key={p} className={props.currentPage === p ? styles.selectedPage:""}
                              onClick={() => {
                                  props.onPagesChanged(p)
                              }}>{p + " "}</span>
