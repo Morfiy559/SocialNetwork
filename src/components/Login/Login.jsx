@@ -1,5 +1,4 @@
 import React from "react";
-// import {} from "redux-form";
 import {Field,reduxForm} from "redux-form";
 import {Element} from "../common/FormsControls/FormsControls";
 import {login} from "../../redux/auth-reducer";

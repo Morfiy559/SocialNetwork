@@ -1,4 +1,10 @@
 .descriptionBlock{
     padding: 10px;
 }
-
+.userPhoto{
+    width: 250px;
+}
+.lookinForAJob{
+    display: flex;
+    align-items: center;
+}

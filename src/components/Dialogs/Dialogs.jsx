@@ -2,7 +2,6 @@ import React from "react";
 import s from './Diologs.module.css';
 import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
-import {Redirect} from "react-router-dom";
 import {reduxForm,Field} from "redux-form";
 import {Element} from "../common/FormsControls/FormsControls";
 import {maxLengthCreator, required} from "../../utils/validators/validators";
@@ -19,7 +18,6 @@ const Dialogs = (props) => {
     let addNewMessage = (values) => {
         props.sendMessage(values.newMessageBody);
     }
-    if(!props.isAuth)return <Redirect to='/login'/>
     return (
 
         <div className={s.dialogs}>
